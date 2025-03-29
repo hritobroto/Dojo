@@ -1,0 +1,11 @@
+{
+    "name": "dojo",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "npx tsc",
+        "watch": "tsc -w"
+    },
+    "devDependencies": {
+        "typescript": "^5.8.2"
+    }
+}

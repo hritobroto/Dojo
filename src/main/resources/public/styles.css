@@ -1,0 +1,412 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Light Theme (Default) */
+body.light {
+    background: #f0f2f5; /* Light gray background */
+    color: #333;
+}
+
+/* Dark Theme */
+body.dark {
+    background: #1a1a1a; /* Dark background */
+    color: #e0e0e0;
+}
+
+/* App Container */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .navbar {
+    background: #2c2c2c;
+    border-bottom: 1px solid #444;
+}
+
+.navbar h1 {
+    font-size: 1.5em;
+}
+
+.menu-toggle,
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.menu-toggle svg,
+.theme-toggle svg {
+    width: 24px;
+    height: 24px;
+}
+
+body.light .menu-toggle svg,
+body.light .theme-toggle svg {
+    fill: #333;
+}
+
+body.dark .menu-toggle svg,
+body.dark .theme-toggle svg {
+    fill: #e0e0e0;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: #fff;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 60px; /* Below navbar */
+    bottom: 0;
+    left: -250px; /* Hidden by default */
+    transition: left 0.3s;
+}
+
+.sidebar.active {
+    left: 0; /* Show sidebar */
+}
+
+body.dark .sidebar {
+    background: #2c2c2c;
+    border-right: 1px solid #444;
+}
+
+.sidebar h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+body.light .sidebar h2 {
+    color: #333;
+}
+
+body.dark .sidebar h2 {
+    color: #e0e0e0;
+}
+
+.sidebar-section {
+    margin: 20px 0;
+}
+
+.sidebar-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+body.light .sidebar-section h3 {
+    color: #666;
+}
+
+body.dark .sidebar-section h3 {
+    color: #aaa;
+}
+
+.sidebar-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-section li {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+body.light .sidebar-section li {
+    color: #333;
+}
+
+body.dark .sidebar-section li {
+    color: #e0e0e0;
+}
+
+body.light .sidebar-section li:hover {
+    background: #f5f5f5;
+}
+
+body.dark .sidebar-section li:hover {
+    background: #3a3a3a;
+}
+
+.add-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+body.light .add-btn {
+    color: #007bff;
+}
+
+body.dark .add-btn {
+    color: #66b0ff;
+}
+
+.add-btn:hover {
+    text-decoration: underline;
+}
+
+.tags .tag {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+body.light .tags .tag {
+    background: #e0e0e0;
+    color: #333;
+}
+
+body.dark .tags .tag {
+    background: #444;
+    color: #e0e0e0;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    margin-top: 60px; /* Space for navbar */
+    overflow-y: auto;
+}
+
+/* Board */
+.board {
+    display: flex;
+    flex-wrap: wrap; /* Columns wrap vertically */
+    gap: 20px;
+    padding: 20px 0;
+    justify-content: center; /* Center columns */
+}
+
+.column {
+    width: 300px; /* Fixed width for columns */
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: move;
+    transition: transform 0.3s;
+}
+
+body.dark .column {
+    background: #2c2c2c;
+    border: 1px solid #444;
+}
+
+.column.dragging {
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+
+.column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.column h2 {
+    font-size: 1.5em;
+}
+
+body.light .column h2 {
+    color: #333;
+}
+
+body.dark .column h2 {
+    color: #e0e0e0;
+}
+
+.remove-column {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.remove-column:hover {
+    color: #cc0000;
+}
+
+.task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.task-form input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+body.light .task-form input {
+    border: 1px solid #ddd;
+}
+
+body.dark .task-form input {
+    border: 1px solid #666;
+    background: #3a3a3a;
+    color: #e0e0e0;
+}
+
+.task-form button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body.light .task-form button {
+    background: #007bff;
+    color: white;
+}
+
+body.dark .task-form button {
+    background: #66b0ff;
+    color: #1a1a1a;
+}
+
+body.light .task-form button:hover {
+    background: #0056b3;
+}
+
+body.dark .task
+
+-form button:hover {
+    background: #4a8fe6;
+}
+
+.task-list {
+    min-height: 100px;
+}
+
+.task-item {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: move;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Sticky Note Colors */
+.task-item[data-category="To Do"] {
+    background: #fff9b1; /* Light yellow */
+    color: #333;
+}
+
+.task-item[data-category="In Progress"] {
+    background: #b1eaff; /* Light blue */
+    color: #333;
+}
+
+.task-item[data-category="Done"] {
+    background: #ffb1cc; /* Light pink */
+    color: #333;
+}
+
+body.dark .task-item {
+    color: #333; /* Keep sticky note text dark for readability */
+}
+
+.task-item.dragging {
+    opacity: 0.7;
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.task-item.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.task-item-content {
+    display: flex;
+    align-items: center;
+}
+
+.task-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.task-item span {
+    flex: 1;
+}
+
+.task-item button {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.task-item button:hover {
+    color: #cc0000;
+}
+
+.add-column {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-column button {
+    padding: 15px;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.light .add-column button {
+    background: #007bff;
+    color: white;
+}
+
+body.dark .add-column button {
+    background: #66b0ff;
+    color: #1a1a1a;
+}
+
+body.light .add-column button:hover {
+    background: #0056b3;
+}
+
+body.dark .add-column button:hover {
+    background: #4a8fe6;
+}

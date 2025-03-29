@@ -1,0 +1,33 @@
+# Ignore all node_modules folders, even if inside subdirectories
+**/node_modules/
+**/package-lock.json
+**/pnpm-lock.yaml
+**/yarn.lock
+
+
+
+# Ignore TypeScript build artifacts
+dist/
+build/
+*.log
+
+# Ignore IntelliJ/VSCode settings
+.idea/
+.vscode/
+
+# Ignore compiled Java files
+target/
+*.class
+
+# Ignore Maven files
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+dependency-reduced-pom.xml
+release.properties
+mvnw
+mvnw.cmd
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
