@@ -1,12 +1,12 @@
-# Dojo - Cyberpunk Sticky Notes To-Do List
+# Dojo
 
-A modern to-do list application with a cyberpunk aesthetic, featuring sticky note-style tasks in a Kanban board layout. Built with Javalin (backend) and TypeScript (frontend), supporting drag-and-drop across columns and light/dark themes.
+A modern to-do list application featuring sticky note-style tasks in a Kanban board layout. Built with Javalin (backend) and TypeScript (frontend), supporting drag-and-drop across columns and light/dark themes.
 
 ## Features
 - **Kanban Board**: Organize tasks into columns (e.g., To Do, In Progress, Done).
 - **Sticky Notes**: Tasks styled as colorful sticky notes.
 - **Drag-and-Drop**: Move tasks within and across columns.
-- **Theme Toggle**: Switch between dark (cyberpunk) and light modes.
+- **Theme Toggle**: Switch between dark and light modes.
 - **Responsive Design**: Works on desktop and mobile.
 - **REST API**: Backend powered by Javalin 6.4.0.
 
