@@ -43,7 +43,7 @@ A modern to-do list application featuring sticky note-style tasks in a Kanban bo
 
 ## Notes
 - Tasks are stored in memory and will reset on server restart.
-- The cyberpunk theme uses neon colors and animations for a futuristic feel.
+- The cyberpunk theme uses neon colors and animations for a futuristic feel. (Deprecated - theme too bright for the app simplicity)
 
 ## License
 MIT License
