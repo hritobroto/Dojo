@@ -21,13 +21,13 @@ A modern to-do list application featuring sticky note-style tasks in a Kanban bo
 ### Using Makefile (Recommended)
 1. **Build the project**: Run `make build` in the terminal.
 2. **Run the application**: Run `make run` in the terminal.
-3. Open `http://localhost:7000` in your browser.
+3. Open `http://localhost:8080` in your browser.
 
 ### Manual Steps
 1. **Build the frontend**: Navigate to the frontend directory with `cd src/main/resources/public`, then run `npm install` followed by `npm run build`.
-2. **Build the backend**: Return to the root directory with `cd ../../..`, then run `mvn clean package`.
+2. **Build the backend**: Return to the root directory with `cd -`, then run `mvn clean package`.
 3. **Run the application**: Execute `java -jar target/Dojo-1.0-SNAPSHOT-jar-with-dependencies.jar`.
-4. Open `http://localhost:7000` in your browser.
+4. Open `http://localhost:8080` in your browser.
 
 ## Usage
 - **Add Tasks**: Use the form in each column to add tasks.
