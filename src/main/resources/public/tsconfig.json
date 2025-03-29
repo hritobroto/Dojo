@@ -2,7 +2,7 @@
     "compilerOptions": {
         "target": "es6",                // Target modern JavaScript (ES6+ for browser compatibility)
         "module": "commonjs",           // Output CommonJS for simplicity (or "esnext" if using a bundler later)
-        "lib": ["dom", "es6"],          // Include DOM and ES6 types, no Node.js specifics
+        "lib": ["dom", "es6", "es2016"],          // Include DOM and ES6 types, no Node.js specifics
         "outDir": "./",                 // Output compiled JS in the same directory
         "rootDir": "./",                // Source files are in the same directory
         "strict": true,                 // Enable strict type checking
